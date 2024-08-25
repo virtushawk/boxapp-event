@@ -1,5 +1,6 @@
 package com.virtushawk.boxappevent.controller;
 
+import com.virtushawk.boxappevent.conf.SimpleConfiguration;
 import com.virtushawk.boxappevent.model.Event;
 import com.virtushawk.boxappevent.model.dto.controller.EventDTO;
 import com.virtushawk.boxappevent.service.EventService;
@@ -14,8 +15,11 @@ public class EventController {
 
     EventService eventService;
 
-    public EventController(EventService eventService) {
+    SimpleConfiguration simpleConfiguration;
+
+    public EventController(EventService eventService, SimpleConfiguration simpleConfiguration) {
         this.eventService = eventService;
+        this.simpleConfiguration = simpleConfiguration;
     }
 
     @GetMapping("{eventId}")
@@ -31,6 +35,7 @@ public class EventController {
         }
         EventDTO dto = new EventDTO();
         dto.setId(event.getId());
+        dto.setName(simpleConfiguration.getNameValue());
         return dto;
     }
 }
