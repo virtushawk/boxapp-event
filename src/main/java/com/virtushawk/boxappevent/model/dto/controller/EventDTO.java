@@ -1,4 +1,4 @@
-package com.virtushawk.boxappevent.dto.controller;
+package com.virtushawk.boxappevent.model.dto.controller;
 
 public class EventDTO {
 
