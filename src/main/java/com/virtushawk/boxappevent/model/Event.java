@@ -4,12 +4,14 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import org.hibernate.annotations.UuidGenerator;
 
 @Entity
 @Table(name = "event")
 public class Event {
 
     @Id
+    @UuidGenerator
     @Column(name = "id", nullable = false)
     private String id;
 
