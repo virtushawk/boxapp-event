@@ -9,4 +9,6 @@ public interface RegistrationService {
     void registerUser(String eventId, UserRegistrationCreateDTO userRegistrationCreateDTO);
 
     List<UserRegistrationDTO> findMembers(String eventId);
+
+    void deleteAllAssignedToUsername(String username);
 }

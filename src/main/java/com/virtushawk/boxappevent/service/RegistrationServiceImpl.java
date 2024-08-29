@@ -10,6 +10,7 @@ import com.virtushawk.boxappevent.service.feign.UserFeignClient;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class RegistrationServiceImpl implements RegistrationService {
@@ -53,5 +54,11 @@ public class RegistrationServiceImpl implements RegistrationService {
         bulkUserRequestDTO.setUsernames(usernames);
 
         return userFeignClient.fetchUsersData(bulkUserRequestDTO);
+    }
+
+    @Transactional
+    @Override
+    public void deleteAllAssignedToUsername(String username) {
+        registrationRepository.deleteAllByUserName(username);
     }
 }

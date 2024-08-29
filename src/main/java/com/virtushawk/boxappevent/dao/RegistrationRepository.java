@@ -12,4 +12,6 @@ public interface RegistrationRepository extends CrudRepository<Registration, Str
 
     @Query("SELECT r.userName FROM Registration r WHERE r.event =:event")
     List<String> findAllUsersByEvent(Event event);
+
+    void deleteAllByUserName(String userName);
 }
