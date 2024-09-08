@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Simple configuration class to demonstrate configuration fetch from configuration service and dynamic reload
+ */
 @Configuration
 @RefreshScope
 public class SimpleConfiguration {

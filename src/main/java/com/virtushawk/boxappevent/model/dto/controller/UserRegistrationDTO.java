@@ -1,5 +1,8 @@
 package com.virtushawk.boxappevent.model.dto.controller;
 
+/**
+ * DTO that contains information about user registration
+ */
 public class UserRegistrationDTO {
 
     private String username;

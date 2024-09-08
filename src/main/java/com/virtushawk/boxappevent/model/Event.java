@@ -6,6 +6,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import org.hibernate.annotations.UuidGenerator;
 
+/**
+ * Contains all information regarding event domain
+ */
 @Entity
 @Table(name = "event")
 public class Event {

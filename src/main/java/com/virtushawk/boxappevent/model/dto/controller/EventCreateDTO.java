@@ -1,5 +1,8 @@
 package com.virtushawk.boxappevent.model.dto.controller;
 
+/**
+ * DTO for event create request
+ */
 public class EventCreateDTO {
 
     private String name;

@@ -5,6 +5,9 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
+/**
+ * Implementation of {@link EventService}
+ */
 @Service
 public class EventServiceImpl implements EventService {
 

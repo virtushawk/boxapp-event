@@ -2,6 +2,9 @@ package com.virtushawk.boxappevent.model.service;
 
 import java.util.List;
 
+/**
+ * DTO for bulk user request
+ */
 public class BulkUserRequestDTO {
 
     private List<String> usernames;

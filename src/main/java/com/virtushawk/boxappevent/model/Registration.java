@@ -8,6 +8,9 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import org.hibernate.annotations.UuidGenerator;
 
+/**
+ * Contains all information regarding registration domain. Registration represents action :"User registers to the event"
+ */
 @Entity
 @Table(name = "registration")
 public class Registration {
